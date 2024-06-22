@@ -58,21 +58,21 @@ The `EventsList` component that displays all eventts in list with host name, eve
    ```
 
 2. Navigate to the project directory:
-  ```sh
-  cd event-app
-  ```
+   ```sh
+   cd event-app
+   ```
 
 3. Install the dependencies:
-  ```sh
-  npm install   
-  ```
-4. Run the app:
-   For iOS:
    ```sh
-    npx react-native run-ios
+   npm install   
    ```
+4. Run the app:
+     - For iOS:
+       ```sh
+        npx react-native run-ios
+       ```
    
-  For Android:
-  ```sh
-  npx react-native run-android
-  ```
+    - For Android:
+      ```sh
+      npx react-native run-android
+      ```
