@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "eventName": "Art show  🎨",
+      "hostName": "Olivia Adams",
+      "location": "Downtown Art Gallery",
+      "eventDate":"Monday, Nov 13 2023",
+      "duration":"6:00 PM - 10:00 PM",
+      "ticketsLeft": 50,
+      "priceRange": "$20.00 - $50.00",
+      "about": "Come join me in celebrating my 25th birthday! I can't wait to celebrate with all of you, so let's make it a night to remember. See you at the party!"
+    },
+    {
+      "id": 2,
+      "eventName": "Music Concert",
+      "hostName": "Bob Smith",
+      "location": "City Park Amphitheater",
+      "eventDate":"Monday, Nov 13 2023",
+      "duration":"6:00 PM - 10:00 PM",
+      "ticketsLeft": 200,
+      "priceRange": "$30.00 - $100.00",
+      "about": "An exciting evening with live performances from top bands and solo artists."
+    },
+    {
+      "id": 3,
+      "eventName": "Food Festival",
+      "hostName": "Charlie Brown",
+      "location": "Central Market Square",
+      "eventDate":"Monday, Nov 13 2023",
+      "duration":"6:00 PM - 10:00 PM",
+      "ticketsLeft": 300,
+      "priceRange": "$10.00 - $40.00",
+      "about": "A delicious event featuring food stalls and trucks from the best local eateries."
+    },
+    {
+      "id": 4,
+      "eventName": "Tech Conference",
+      "hostName": "Diana Ross",
+      "location": "Convention Center",
+      "eventDate":"Monday, Nov 13 2023",
+      "duration":"6:00 PM - 10:00 PM",
+      "ticketsLeft": 100,
+      "priceRange": "$50.00 - $200.00",
+      "about": "A conference where industry leaders discuss the latest in technology and innovation."
+    },
+    {
+      "id": 5,
+      "eventName": "Charity Run",
+      "hostName": "Edward King",
+      "location": "Riverside Park",
+      "eventDate":"Monday, Nov 13 2023",
+      "duration":"6:00 PM - 10:00 PM",
+      "ticketsLeft": 150,
+      "priceRange": "$15.00 - $60.00",
+      "about": "Join us for a 5K run to raise funds for local charities and non-profit organizations."
+    }
+  ]
+  
