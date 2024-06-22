@@ -2,21 +2,12 @@
 
 This repository contains the code for the Event App, a React Native application that provides details about events and allows users to purchase tickets.
 
-## Screens
-
-### Events List
-The `EventsList` component that displays all eventts in list with host name, event name and event image. 
-
-### EventBottomSheet
-The `EventBottomSheet` component is a modal bottom sheet that displays detailed information about an event. 
-
-### Event Questionnaire
-The `EventQuestionnaire` component is a collecting  information about an event with different questions. 
-
 
 #### Features
 
 1.**EventBottomSheet**
+The `EventBottomSheet` component is a modal bottom sheet that displays detailed information about an event. 
+
 - **Event Name**: Displays the name of the event.
 - **Host Name**: Displays the name of the event host.
 - **Event Details**: Shows details including:
@@ -30,6 +21,8 @@ The `EventQuestionnaire` component is a collecting  information about an event w
 - **Buy Ticket Button**: Button at the bottom that navigates to the "EventQuestionnaire" screen.
 
   2.**EventQuestionnaire**
+  The `EventQuestionnaire` component is a collecting  information about an event with different questions.
+  
 - **Question Steps**: Four steps to collect different information:
   1. Company/Organization
   2. Job Title
@@ -38,6 +31,8 @@ The `EventQuestionnaire` component is a collecting  information about an event w
 - **Navigation Buttons**: Buttons to navigate to the next or previous question. The last step shows a "Claim ticket" button.
 
 3.**EventsList**
+The `EventsList` component that displays all eventts in list with host name, event name and event image. 
+
 - **Event List**: Displays a list of upcoming events with:
   - Event Image
   - Event Name
