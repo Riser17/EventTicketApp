@@ -23,12 +23,12 @@ The `EventBottomSheet` component is a modal bottom sheet that displays detailed 
   2. **EventQuestionnaire**:
   The `EventQuestionnaire` component is a collecting  information about an event with different questions.
   
-    - **Question Steps**: Four steps to collect different information:
+  - **Question Steps**: Four steps to collect different information:
       1. Company/Organization
       2. Job Title
       3. Are you a current student?
       4. Where did you hear about this event?
-    - **Navigation Buttons**: Buttons to navigate to the next or previous question. The last step shows a "Claim ticket" button.
+  - **Navigation Buttons**: Buttons to navigate to the next or previous question. The last step shows a "Claim ticket" button.
 
 3. **EventsList**:
 The `EventsList` component that displays all eventts in list with host name, event name and event image. 
