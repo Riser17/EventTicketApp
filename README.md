@@ -82,3 +82,7 @@ The `EventsList` component that displays all eventts in list with host name, eve
 <img width="318" alt="image" src="https://github.com/Riser17/EventTicketApp/assets/91198103/e1ee8c6c-1f6f-49a1-8e18-87cc185f8986">
 <img width="318" alt="image" src="https://github.com/Riser17/EventTicketApp/assets/91198103/1ec21031-b2e2-4f3a-b4c1-4908cd07b089">
 
+https://github.com/Riser17/EventTicketApp/assets/91198103/c4293828-7478-417c-868b-3f479ac6e4a7
+
+
+
