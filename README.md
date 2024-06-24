@@ -31,6 +31,7 @@ This is the backend for the Event Management Application, built with Node.js, Ex
 
 ## Project Structure
 
+```
 event-management-backend/
 ├── config/
 │   └── db.js          # Database connection configuration
@@ -46,7 +47,7 @@ event-management-backend/
 ├── index.js           # Main application file
 ├── package.json       # Node package manager configuration
 └── README.md          # Project documentation
-
+```
 
 ## API Endpoints
 
