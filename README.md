@@ -5,11 +5,8 @@ This is the backend for the Event Management Application, built with Node.js, Ex
 ## Table of Contents
 
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Project Structure](#project-structure)
-- [License](#license)
 
 ## Installation
 
@@ -31,6 +28,25 @@ This is the backend for the Event Management Application, built with Node.js, Ex
    PORT=5000
    MONGO_URI=your_mongodb_uri
    ```
+
+## Project Structure
+
+event-management-backend/
+├── config/
+│   └── db.js          # Database connection configuration
+├── controllers/
+│   └── eventController.js  # Event controller functions
+├── modals/
+│   └── Event.js       # Event model schema
+├── routes/
+│   └── eventRoutes.js # Event routes
+├── services/
+│   └── eventService.js# Event service functions
+├── .env               # Environment variables
+├── index.js           # Main application file
+├── package.json       # Node package manager configuration
+└── README.md          # Project documentation
+
 
 ## API Endpoints
 
