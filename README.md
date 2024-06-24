@@ -5,8 +5,8 @@ This is the backend for the Event Management Application, built with Node.js, Ex
 ## Table of Contents
 
 - [Installation](#installation)
-- [API Endpoints](#api-endpoints)
 - [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
 
 ## Installation
 
