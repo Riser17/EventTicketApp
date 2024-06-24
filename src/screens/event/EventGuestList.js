@@ -1,27 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
   FlatList,
   Image,
   StyleSheet,
-  TouchableOpacity,
-  SafeAreaView,
   Pressable,
+  SafeAreaView,
 } from "react-native";
+import { useSelector, useDispatch } from "react-redux";
 
 import Ticket from "../../Ticket";
-import eventUsersList from "../../api/data/eventUsersList.json";
 import EventBottomSheet from "../../components/EventBottomSheet";
+import { getEventsApi } from "../../api/slice/eventSlice/eventApiSlice";
+import ActivityIndicator from "../../components/ActivityIndicator";
 
 const EventGuestList = () => {
-  const [showEventBoottomSheet, setShowEventBoottomSheet] = useState(false);
+  const dispatch = useDispatch();
+  const eventsData = useSelector((state) => state.events.eventsData);
+  const eventsStatus = useSelector((state) => state.events.status);
+  const eventsError = useSelector((state) => state.events.error);
+
+  const [showEventBottomSheet, setShowEventBottomSheet] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+
+  console.log(
+    "----------------------------------------------------------------"
+  );
+  console.log("events Data:", eventsData);
+  console.log("event Status:", eventsStatus);
+  console.log("event Error:", eventsError);
+  console.log("------------------");
+
+  useEffect(() => {
+    dispatch(getEventsApi());
+  }, [dispatch]);
 
   const eventPressed = (item) => {
     setSelectedEvent(item);
-    setShowEventBoottomSheet(true);
+    setShowEventBottomSheet(true);
   };
+
   const renderItem = ({ item }) => (
     <Pressable style={styles.card} onPress={() => eventPressed(item)}>
       <Image
@@ -39,22 +58,20 @@ const EventGuestList = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.headerTitle}>Upcoming Events</Text>
-
       <FlatList
-        data={eventUsersList}
+        data={eventsData}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.list}
       />
-      {showEventBoottomSheet ? (
+      {showEventBottomSheet && (
         <EventBottomSheet
-          onClose={() => {
-            setShowEventBoottomSheet(false);
-          }}
+          onClose={() => setShowEventBottomSheet(false)}
           selectedEvent={selectedEvent}
         />
-      ) : null}
+      )}
+      {eventsStatus === "loading" && <ActivityIndicator />}
     </SafeAreaView>
   );
 };

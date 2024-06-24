@@ -6,7 +6,6 @@ import {
   StyleSheet,
   Pressable,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import CustomInputField from "../../components/CustomInputField";
 import Ticket from "../../Ticket";
