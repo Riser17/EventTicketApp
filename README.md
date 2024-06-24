@@ -1,6 +1,6 @@
 # Event Management Backend
 
-This is the backend for the Event Management Application, built with Node.js, Express, and MongoDB. It provides RESTful APIs to manage events, including creating, updating, fetching, and deleting event records.
+This is the backend for the Event Management Application, built with Node.js, Express, and MongoDB. It provides RESTful APIs to manage events, including fetching all event records.
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ This is the backend for the Event Management Application, built with Node.js, Ex
 
    ```bash
    PORT=5000
-   MONGO_URI=your_mongodb_uri
+   MONGO_URI=your_mongodb_uri // mongodb atlas link
    ```
 
 ## Project Structure
