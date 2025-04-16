@@ -9,32 +9,36 @@ import {
   SafeAreaView,
 } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { useNavigation } from "@react-navigation/native";
 
 import Ticket from "../../Ticket";
 import EventBottomSheet from "../../components/EventBottomSheet";
 import { getEventsApi } from "../../api/slice/eventSlice/eventApiSlice";
 import ActivityIndicator from "../../components/ActivityIndicator";
-
+import eventsData from "../../api/data/eventUsersList.json";
 const EventGuestList = () => {
+  const navigation = useNavigation();
+  
   const dispatch = useDispatch();
-  const eventsData = useSelector((state) => state.events.eventsData);
-  const eventsStatus = useSelector((state) => state.events.status);
-  const eventsError = useSelector((state) => state.events.error);
+  // const eventsData = useSelector((state) => state.events.eventsData);
+  // const eventsStatus = useSelector((state) => state.events.status);
+  // const eventsError = useSelector((state) => state.events.error);
 
   const [showEventBottomSheet, setShowEventBottomSheet] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  console.log(
-    "----------------------------------------------------------------"
-  );
-  console.log("events Data:", eventsData);
-  console.log("event Status:", eventsStatus);
-  console.log("event Error:", eventsError);
-  console.log("------------------");
+  // console.log(
+  //   "----------------------------------------------------------------"
+  // );
+  // console.log("events Data:", eventsData);
+  // console.log("event Status:", eventsStatus);
+  // console.log("event Error:", eventsError);
+  // console.log("------------------");
 
-  useEffect(() => {
-    dispatch(getEventsApi());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getEventsApi());
+  // }, [dispatch]);
 
   const eventPressed = (item) => {
     setSelectedEvent(item);
@@ -57,7 +61,14 @@ const EventGuestList = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginHorizontal:18}}>      
       <Text style={styles.headerTitle}>Upcoming Events</Text>
+      <Pressable onPress={()=>{
+        navigation.navigate("CreateEvents");
+      }}>
+      <Icon name="tooltip-plus" size={24} color="#2F2E41" />
+      </Pressable>
+      </View>
       <FlatList
         data={eventsData}
         renderItem={renderItem}
@@ -71,7 +82,7 @@ const EventGuestList = () => {
           selectedEvent={selectedEvent}
         />
       )}
-      {eventsStatus === "loading" && <ActivityIndicator />}
+      {/* {eventsStatus === "loading" && <ActivityIndicator />} */}
     </SafeAreaView>
   );
 };
@@ -84,6 +95,7 @@ const styles = StyleSheet.create({
   list: {
     gap: 16,
     paddingHorizontal: 20,
+    paddingVertical:20
   },
   card: {
     backgroundColor: "#fff",
@@ -119,7 +131,7 @@ const styles = StyleSheet.create({
     color: "#2F2E41",
     fontSize: 26,
     fontWeight: "600",
-    padding: 20,
+    paddingVertical: 20,
   },
 });
 
